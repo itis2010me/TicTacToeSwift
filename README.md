@@ -16,9 +16,9 @@ Preparation for another swift application. :)
 
 ### Screen shots
 
-<img src="/Users/yuanchang/iOS/TicTacToeGit/TicTacToeSwift/src/p1.png" alt="image" style="zoom:50%;" />
+<img src="./src/p1.png" alt="image" style="zoom:50%;" />
 
-<img src="/Users/yuanchang/iOS/TicTacToeGit/TicTacToeSwift/src/p2.png" alt="image" style="zoom:50%;" />
+<img src="./src/p2.png" alt="image" style="zoom:50%;" />
 
 Version 1.0
 
