@@ -5,9 +5,11 @@ Initial attempt at making an iOS application.
 
 Nothing serious, just trying out MVVM in swift, understanding functional programming. 
 
-Preparation for another swift application. :)
+Preparation for another swift application. :) \
 
+\
 
+\
 
 ## Ideas and help from Stanford iOS course and Sean Allen
 
