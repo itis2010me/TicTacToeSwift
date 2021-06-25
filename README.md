@@ -1,6 +1,8 @@
 # TicTacToeSwift
 Initial attempt at making an iOS application.
 
+<img src="./TicTacToe/Assets.xcassets/AppIcon.appiconset/Bao180.png" alt="image" style="zoom:50%;" align = "left"/>
+
 Nothing serious, just trying out MVVM in swift, understanding functional programming. 
 
 Preparation for another swift application. :)
@@ -20,5 +22,5 @@ Preparation for another swift application. :)
 
 <img src="./src/p2.png" alt="image" style="zoom:50%;" />
 
-Version 1.0
+Version 1.2 - June 25, 2021
 
