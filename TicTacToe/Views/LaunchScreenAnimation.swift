@@ -34,7 +34,7 @@ struct LaunchScreenAnimation: View {
                 animate.toggle()
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 fades.toggle()
             }
         }

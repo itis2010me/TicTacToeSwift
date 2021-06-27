@@ -14,7 +14,10 @@ class TicTakToeGame: ObservableObject {
     }
     
     func startNewGame() {
-        model = TicTakToeGame.createGame()
+        model.restartAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.model = TicTakToeGame.createGame()
+        }
     }
 
     

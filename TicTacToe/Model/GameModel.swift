@@ -23,6 +23,13 @@ struct Game {
         moves = Array(repeating: nil, count: 9)
     }
     
+    // scale back to none
+    mutating func restartAnimation() {
+        for index in moves.indices {
+            moves[index]?.scale.toggle()
+        }
+    }
+    
     mutating func choose(index: Int) {
         if moves[index] == nil {
             if isPlayer1Turn {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     
     @Environment(\.colorScheme) var colorScheme // adjust to darkmode and light mode
     @ObservedObject var viewModel: TicTakToeGame // view model
@@ -16,12 +16,11 @@ struct ContentView: View {
         let gameState = viewModel.moves
         ZStack {
             VStack{
-               
                 ZStack{
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))],
                              spacing: 45) {
                         ForEach(0..<9) { index in
-                            Shape(content:gameState[index]?.moveIndicator ?? "",
+                            ShapeView(content:gameState[index]?.moveIndicator ?? "",
                                   scale: gameState[index]?.scale ?? true)
                                 .onTapGesture {
                                     viewModel.choose(index)
@@ -39,7 +38,6 @@ struct ContentView: View {
                                   viewModel: viewModel)
                 Spacer(minLength: 50)
             }
-            LaunchScreenAnimation()
         }
     }
 }
@@ -62,7 +60,6 @@ struct Shape: View {
                 .scaleEffect(scale ? 0 : 1, anchor: .center)
                 .animation(.easeInOut(duration:0.4))
                 .foregroundColor(.white)
-                
         }
     }
 }
@@ -113,7 +110,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = TicTakToeGame()
         Group {
-            ContentView(viewModel: game)
+            GameView(viewModel: game)
         }
     }
 }

@@ -12,7 +12,7 @@ struct TicTacToeApp: App {
     var body: some Scene {
         let game = TicTakToeGame()
         WindowGroup {
-            ContentView(viewModel: game)
+            HomeView(viewModel: game)
         }
     }
 }
