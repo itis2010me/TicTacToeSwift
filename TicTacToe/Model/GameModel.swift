@@ -9,6 +9,8 @@ import Foundation
 
 struct Game {
     
+//    var rotate: Bool = false
+    
     private(set) var moves: [Move?]
     
     private(set) var isPlayer1Turn: Bool = true
@@ -24,9 +26,9 @@ struct Game {
     mutating func choose(index: Int) {
         if moves[index] == nil {
             if isPlayer1Turn {
-                moves[index] = Move(player1: true, boardIndex: index)
+                moves[index] = Move(player1: true, boardIndex: index, scale: false)
             } else {
-                moves[index] = Move(player1: false, boardIndex: index)
+                moves[index] = Move(player1: false, boardIndex: index, scale: false)
             }
             win = checkWin()
             draw = checkDraw()
@@ -38,12 +40,13 @@ struct Game {
     
     func checkWin() -> Bool {
         
+        // all the possible win conditions
         let winConditions: Set<Set<Int>> = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8],[2,4,6]]
         
         let currentPlayerMoves = moves.compactMap {
-            $0
+            $0 // all of the moves
         }.filter {
-            $0.player1 == isPlayer1Turn
+            $0.player1 == isPlayer1Turn // all of the data
         }
         
         let currentPlayerPositions = Set(currentPlayerMoves.map {
@@ -63,6 +66,7 @@ struct Game {
         let winAtLastMove = checkWin()
         let numMovesMade = moves.compactMap {$0}.count
         if numMovesMade == 9 {
+            // if won at 9 moves, display win instead of draw
             if winAtLastMove {
                 return false
             } else {
@@ -72,6 +76,10 @@ struct Game {
         }
         return false
     }
+    
+//    mutating func rotation() {
+//        rotate.toggle()
+//    }
    
     struct Move {
         
@@ -84,6 +92,8 @@ struct Game {
                 return "circle"
             }
         }
+        // for animation
+        var scale: Bool = true
     }
     
 }

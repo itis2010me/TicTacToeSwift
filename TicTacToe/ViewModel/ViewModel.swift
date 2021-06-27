@@ -16,6 +16,7 @@ class TicTakToeGame: ObservableObject {
     func startNewGame() {
         model = TicTakToeGame.createGame()
     }
+
     
     @Published private(set) var model: Game = createGame()
     
@@ -38,6 +39,4 @@ class TicTakToeGame: ObservableObject {
     var draw: Bool {
         return model.draw
     }
-    
-    
 }
