@@ -11,7 +11,6 @@ Preparation for another swift application. :)
 
 ### Some issues
 
-- Curretly no Home Screen 
 - Does not work in darkmode
 - Does not support computer mode
 
