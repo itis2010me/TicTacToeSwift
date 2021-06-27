@@ -17,9 +17,13 @@ Preparation for another swift application. :)
 
 ### Screen shots
 
-<img src="./src/launch.png" alt="image" style="zoom:50%;" />
+Launch screen:
 
-<img src="./src/game.png" alt="image" style="zoom:50%;" />
+<img src="./src/launch.png" alt="image" style="zoom:50%;" width=500px />
+
+Game screen
+
+<img src="./src/game.png" alt="image" style="zoom:50%;" width=500px/>
 
 Version 1.5 - June 26, 2021
 
