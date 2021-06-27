@@ -4,3 +4,5 @@
   - Initial implementation of TicTacToe.
 - June 25, 2021
   - Added AppIcon - XLB(XiaoLongBao)
+- June 26, 2021
+  - Added Animation
